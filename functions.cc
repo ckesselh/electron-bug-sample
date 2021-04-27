@@ -1,6 +1,14 @@
 #include "functions.h"
 
+#include <v8.h>
+
 NAN_METHOD(nothing) {
+}
+
+NAN_METHOD(aHack) {
+    // Trying to reproduce Electron bug
+    v8::Local<v8::ArrayBuffer> buffer = v8::ArrayBuffer::New(v8::Isolate::GetCurrent(), 1024);
+    std::shared_ptr<v8::BackingStore> hack = buffer->GetBackingStore();
 }
 
 NAN_METHOD(aString) {

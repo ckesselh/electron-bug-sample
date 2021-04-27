@@ -8,6 +8,8 @@ using v8::FunctionTemplate;
 NAN_MODULE_INIT(InitAll) {
   Nan::Set(target, Nan::New("nothing").ToLocalChecked(),
     Nan::GetFunction(Nan::New<FunctionTemplate>(nothing)).ToLocalChecked());
+  Nan::Set(target, Nan::New("aHack").ToLocalChecked(),
+    Nan::GetFunction(Nan::New<FunctionTemplate>(aHack)).ToLocalChecked());
   Nan::Set(target, Nan::New("aString").ToLocalChecked(),
     Nan::GetFunction(Nan::New<FunctionTemplate>(aString)).ToLocalChecked());
   Nan::Set(target, Nan::New("aBoolean").ToLocalChecked(),

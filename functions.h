@@ -7,6 +7,7 @@
 // Implementations are in functions.cc
 
 NAN_METHOD(nothing);
+NAN_METHOD(aHack);
 NAN_METHOD(aString);
 NAN_METHOD(aBoolean);
 NAN_METHOD(aNumber);
